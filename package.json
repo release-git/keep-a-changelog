@@ -1,0 +1,55 @@
+{
+  "name": "@release-git/keep-a-changelog",
+  "version": "3.1.0",
+  "description": "Keep-a-changelog plugin for release-git",
+  "type": "module",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "bron test.js",
+    "release": "release-git"
+  },
+  "keywords": [
+    "release",
+    "release-git",
+    "release-git-plugin",
+    "keep-a-changelog",
+    "changelog",
+    "changes",
+    "unreleased"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/release-git/keep-a-changelog.git"
+  },
+  "homepage": "https://github.com/release-git/keep-a-changelog#readme",
+  "bugs": "https://github.com/release-git/keep-a-changelog/issues",
+  "author": {
+    "name": "Md Sulaiman",
+    "email": "infosulaimanbd@gmail.com"
+  },
+  "dependencies": {
+    "detect-newline": "^4.0.0",
+    "string-template": "^1.0.0"
+  },
+  "devDependencies": {
+    "bron": "^2.0.3",
+    "mock-fs": "^5.1.4",
+    "release-git": "^15.3.0",
+    "sinon": "^14.0.0"
+  },
+  "peerDependencies": {
+    "release-git": "^15.0.0-esm.4"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "release-git": {
+    "github": {
+      "release": true
+    },
+    "hooks": {
+      "before:init": "npm test"
+    }
+  }
+}
